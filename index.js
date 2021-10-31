@@ -6,9 +6,7 @@ require('dotenv').config()
 const app = express()
 app.use(cors())
 app.use(express.json())
-const port = process.env.port || 5000
-// user:dream_tour
-// pass: fCpfFHuN0pv6DrM3
+const port = process.env.port || 5000;
 
 
 const uri = `mongodb+srv://${process.env.USER_ID}:${process.env.USER_PASS}@cluster0.4ye73.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
@@ -106,7 +104,7 @@ run().catch(console.dir);
 
 
 app.get('/', (req, res) => {
-    res.send('Hello World!')
+    res.send('Running DreamTour Server!')
 });
 
 app.listen(port, () => {
